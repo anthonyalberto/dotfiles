@@ -1,0 +1,26 @@
+.source.java {
+    .meta {
+        &.method {
+            color: @off-white;
+        }
+        &.method-call {
+            color: @off-white;
+        }
+    }
+    .storage {
+        &.modifier.import {
+            color: @off-yellow;
+        }
+        &.type {
+            color: @off-yellow;
+        }
+    }
+}
+.source.java-properties {
+    .meta.key-pair {
+        color: @light-red;
+        & > .punctuation {
+            color: @darker-light-blue;
+        }
+    }
+}

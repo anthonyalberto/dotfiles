@@ -1,0 +1,69 @@
+# hirb: some nice stuff for Rails
+begin
+  require 'hirb'
+  HIRB_LOADED = true
+rescue LoadError
+  HIRB_LOADED = false
+end
+
+require 'logger'
+
+def loud_logger
+  enable_hirb
+  set_logger_to Logger.new(STDOUT)
+end
+
+def quiet_logger
+  disable_hirb
+  set_logger_to nil
+end
+
+def set_logger_to(logger)
+  ActiveRecord::Base.logger = logger
+  ActiveRecord::Base.clear_reloadable_connections!
+end
+
+def enable_hirb
+  if HIRB_LOADED
+    Hirb::Formatter.dynamic_config['ActiveRecord::Base']
+    Hirb.enable
+  else
+    puts "hirb is not loaded"
+  end
+end
+
+def disable_hirb
+  if HIRB_LOADED
+    Hirb.disable
+  else
+    puts "hirb is not loaded"
+  end
+end
+
+
+# set a nice prompt
+rails_root = File.basename(Dir.pwd)
+Pry.config.prompt_name = rails_root
+Pry.config.prompt[0] = proc { "@#{rails_root}>> " }
+Pry.config.prompt[1] = proc { |_, nest_level, _| "@#{rails_root}:#{nest_level}** " }
+
+
+if defined? Hirb
+  # Slightly dirty hack to fully support in-session Hirb.disable/enable toggling
+  Hirb::View.instance_eval do
+    def enable_output_method
+      @output_method = true
+      @old_print = Pry.config.print
+      Pry.config.print = proc do |output, value|
+        Hirb::View.view_or_page_output(value) || @old_print.call(output, value)
+      end
+    end
+
+    def disable_output_method
+      Pry.config.print = @old_print
+      @output_method = nil
+    end
+  end
+
+#  Hirb.enable
+end

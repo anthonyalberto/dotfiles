@@ -1,0 +1,59 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87438-vr7dng.608ww89f6r/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87438-vr7dng.608ww89f6r/package.tgz",
+        "spec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87438-vr7dng.608ww89f6r/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/apm-install-dir-11812-87438-zjympn.tgjgmeipb9"
+    ]
+  ],
+  "_from": "../d-11812-87438-vr7dng.608ww89f6r/package.tgz",
+  "_id": "language-chef@0.11.0",
+  "_inCache": true,
+  "_location": "/language-chef",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87438-vr7dng.608ww89f6r/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87438-vr7dng.608ww89f6r/package.tgz",
+    "spec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87438-vr7dng.608ww89f6r/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11812-87438-vr7dng.608ww89f6r/package.tgz",
+  "_shasum": "f06efbc6e0f5290b3f7208dffc2693db897cb5b8",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87438-vr7dng.608ww89f6r/package.tgz",
+  "_where": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/apm-install-dir-11812-87438-zjympn.tgjgmeipb9",
+  "bugs": {
+    "url": "https://github.com/darron/language-chef/issues"
+  },
+  "dependencies": {},
+  "description": "Atom support for Chef.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/darron/language-chef#readme",
+  "license": "MIT",
+  "name": "language-chef",
+  "optionalDependencies": {},
+  "private": true,
+  "readme": "# language-chef package\n\nChef support for [Atom](http://atom.io).\n\nConverted from [Dr. Nic's TextMate bundle](https://github.com/drnic/Chef.tmbundle).\n\nSnippets extends from [vim-chef](https://github.com/vadv/vim-chef)\n\n## Install\n\nGo to `Atom > Preferences...` then search for **language-chef** in Packages tab.\n\n## Development\n\n```sh\n$ cd ~/.atom/packages\n$ git clone https://github.com/darron/language-chef\n$ cd language-chef\n$ apm install\n$ apm link\n```\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darron/language-chef.git"
+  },
+  "version": "0.11.0"
+}

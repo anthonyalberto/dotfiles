@@ -1,0 +1,60 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87439-1ol4qc1.ugd4zk6gvi/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87439-1ol4qc1.ugd4zk6gvi/package.tgz",
+        "spec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87439-1ol4qc1.ugd4zk6gvi/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/apm-install-dir-11812-87439-1ntr86u.lpe66o5hfr"
+    ]
+  ],
+  "_from": "../d-11812-87439-1ol4qc1.ugd4zk6gvi/package.tgz",
+  "_id": "railscast-theme@0.4.0",
+  "_inCache": true,
+  "_location": "/railscast-theme",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87439-1ol4qc1.ugd4zk6gvi/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87439-1ol4qc1.ugd4zk6gvi/package.tgz",
+    "spec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87439-1ol4qc1.ugd4zk6gvi/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11812-87439-1ol4qc1.ugd4zk6gvi/package.tgz",
+  "_shasum": "f9d21591a4314f032942b2803c626638a48cdcf8",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11812-87439-1ol4qc1.ugd4zk6gvi/package.tgz",
+  "_where": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/apm-install-dir-11812-87439-1ntr86u.lpe66o5hfr",
+  "bugs": {
+    "url": "https://github.com/ericfreese/atom-railscast-theme/issues"
+  },
+  "dependencies": {},
+  "description": "Atom syntax theme based on Ryan Bates (@rbates) RailsCasts TextMate theme",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/ericfreese/atom-railscast-theme#readme",
+  "license": "MIT",
+  "name": "railscast-theme",
+  "optionalDependencies": {},
+  "private": false,
+  "readme": "# RailsCast Syntax Theme\n\nSyntax theme based on the RailsCast TextMate theme.\n\n![railscast theme](http://i.imgur.com/rUrA8OB.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericfreese/atom-railscast-theme.git"
+  },
+  "theme": "syntax",
+  "version": "0.4.0"
+}

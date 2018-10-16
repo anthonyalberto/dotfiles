@@ -1,0 +1,34 @@
+AllCops:
+  Exclude:
+    - 'vendor/**/*'
+    - 'spec/fixtures/**/*'
+    - 'tmp/**/*'
+  TargetRubyVersion: 2.2
+
+Metrics/LineLength:
+  Max: 120
+Metrics/MethodLength:
+  Max: 20
+Metrics/ClassLength:
+  Max: 200
+Metrics/AbcSize:
+  Max: 25
+
+Documentation:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+
+Style/StringLiterals:
+  Enabled: false
+
+# Allow safe assignment in conditions.
+Style/ParenthesesAroundCondition:
+  AllowSafeAssignment: true
+
+Style/RegexpLiteral:
+  Enabled: false

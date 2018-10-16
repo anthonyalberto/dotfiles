@@ -1,0 +1,46 @@
+"*":
+  "autocomplete-python":
+    useKite: false
+  autosave:
+    enabled: true
+  core:
+    audioBeep: false
+    packagesWithKeymapsDisabled: [
+      "rails-rspec"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "atom-dark-ui"
+      "railscast-theme"
+    ]
+  editor:
+    invisibles: {}
+    preferredLineLength: 320
+    showIndentGuide: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "1d021b51-eac9-dfe1-f945-373daeca65fe"
+  fonts: {}
+  "fuzzy-finder": {}
+  "go-plus":
+    format: {}
+    panelDisplayMode: "closed"
+    test:
+      runTestsOnSave: false
+  linter: {}
+  "linter-flake8":
+    maxLineLength: 160
+  "linter-golinter": {}
+  "linter-rubocop": {}
+  "linter-ui-default": {}
+  "rails-rspec": {}
+  rspec:
+    command: "~/.rbenv/shims/bundle exec rspec"
+  "tree-view": {}
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
+".rspec.ruby.source":
+  editor:
+    preferredLineLength: 320

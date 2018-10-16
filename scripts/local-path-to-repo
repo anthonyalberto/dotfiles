@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+abort if ARGV.empty?
+
+repo = ARGV[0]
+path = false
+
+Dir.glob("/Users/#{ENV["USER"]}/Code/src/*/*/*").each do |dir|
+  if dir =~ %r{/#{repo}}
+    path = dir
+    break
+  end
+end
+
+abort "Couldn't find repo #{repo}" unless path
+
+print path

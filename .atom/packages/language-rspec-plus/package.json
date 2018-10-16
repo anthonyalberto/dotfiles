@@ -1,0 +1,45 @@
+{
+  "name": "language-rspec-plus",
+  "main": "./lib/language-rspec",
+  "version": "0.1.1",
+  "description": "More complete RSpec language package for Atom with double quotes",
+  "keywords": [
+    "rspec",
+    "spec",
+    "ruby",
+    "test",
+    "bdd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berfarah/language-rspec-plus.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "readme": "# RSpec language support in Atom\n\nAdds syntax highlighting and snippets to RSpec file in Atom.\n\nForked from https://github.com/paveldruzyak/language-rspec\n\nInfluenced by:\nhttps://github.com/SublimeText/RSpec\nhttps://github.com/kazshu/rspec-snippets\n\nContributions are greatly appreciated. Please fork this repository and open a\npull request to add snippets, make grammar tweaks, etc.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/berfarah/language-rspec-plus/issues"
+  },
+  "homepage": "https://github.com/berfarah/language-rspec-plus#readme",
+  "_id": "language-rspec-plus@0.1.1",
+  "_shasum": "10cdb45bd88c160a26b908e4a7b6e39a46db7ca5",
+  "_resolved": "file:../d-1151116-16619-zc3utf/package.tgz",
+  "_from": "../d-1151116-16619-zc3utf/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib/language-rspec.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

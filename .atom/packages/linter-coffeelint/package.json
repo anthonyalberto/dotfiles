@@ -1,0 +1,724 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11787-60308-15jpn72.mj806q1tt9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11787-60308-15jpn72.mj806q1tt9/package.tgz",
+        "spec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11787-60308-15jpn72.mj806q1tt9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/apm-install-dir-11787-60308-1us957b.29po8q6w29"
+    ]
+  ],
+  "_from": "../d-11787-60308-15jpn72.mj806q1tt9/package.tgz",
+  "_id": "linter-coffeelint@1.3.1",
+  "_inCache": true,
+  "_location": "/linter-coffeelint",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11787-60308-15jpn72.mj806q1tt9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11787-60308-15jpn72.mj806q1tt9/package.tgz",
+    "spec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11787-60308-15jpn72.mj806q1tt9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11787-60308-15jpn72.mj806q1tt9/package.tgz",
+  "_shasum": "c2793b18913c0b8159ade4bea69bf858f3c37247",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/d-11787-60308-15jpn72.mj806q1tt9/package.tgz",
+  "_where": "/private/var/folders/1t/5jfr38vs3vb5y_ygjhzkd9_c0000gn/T/apm-install-dir-11787-60308-1us957b.29po8q6w29",
+  "activationHooks": [
+    "language-coffee-script:grammar-used",
+    "language-iced-coffee-script:grammar-used"
+  ],
+  "bugs": {
+    "url": "https://github.com/AtomLinter/linter-coffeelint/issues"
+  },
+  "dependencies": {
+    "atom-linter": "^10.0.0",
+    "atom-package-deps": "^4.6.0",
+    "coffeelint": "^1.16.0",
+    "ignore": "^3.3.3",
+    "resolve": "^1.4.0",
+    "semver": "^5.4.1"
+  },
+  "description": "Lint CoffeeScript on the fly, using coffeelint",
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "jasmine-fix": "^1.3.0"
+  },
+  "engines": {
+    "atom": ">=1.7.0 <2.0.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "global-require": "off",
+      "import/no-unresolved": [
+        "error",
+        {
+          "ignore": [
+            "atom"
+          ]
+        }
+      ]
+    },
+    "globals": {
+      "atom": true
+    },
+    "env": {
+      "node": true,
+      "browser": true
+    }
+  },
+  "homepage": "https://github.com/AtomLinter/linter-coffeelint#readme",
+  "license": "MIT",
+  "main": "./src/index",
+  "name": "linter-coffeelint",
+  "optionalDependencies": {},
+  "package-deps": [
+    "linter:2.0.0"
+  ],
+  "private": true,
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "2.0.0": "provideLinter"
+      }
+    }
+  },
+  "readme": "[![Stories in Ready](https://badge.waffle.io/AtomLinter/linter-coffeelint.png?label=ready&title=Ready)](https://waffle.io/AtomLinter/linter-coffeelint)\nlinter-coffeelint\n=========================\n\nThis linter plugin for [Linter](https://github.com/AtomLinter/Linter) provides an interface to [coffeelint](http://www.coffeelint.org/). It will be used with files that have the “CoffeeScript” or “CoffeeScript (literate)” syntax.\n\n## Installation\nLinter package must be installed in order to use this plugin. If Linter is not installed, please follow the instructions [here](https://github.com/AtomLinter/Linter).\n\n### Plugin installation\n```\n$ apm install linter-coffeelint\n```\n\n## Settings\n\nAs of v0.2.0 there is no need to specify a path to coffeelint. If you need to use a specific version you can specify it in your project's `package.json` and `linter-coffeelint` will use that one. This is the same behavior the coffeelint commandline gives you.\n\nYour configuration belongs in your project, not your editor.\nhttps://github.com/clutchski/coffeelint/blob/master/doc/user.md\n\n## Contributing\nIf you would like to contribute enhancements or fixes, please do the following:\n\n1. Fork the plugin repository.\n1. Hack on a separate topic branch created from the latest `master`.\n1. Commit and push the topic branch.\n1. Make a pull request.\n1. welcome to the club\n\nPlease note that modifications should follow these coding guidelines:\n\n- Indent is 2 spaces.\n- Code should pass coffeelint linter.\n- Vertical whitespace helps readability, don’t be afraid to use it.\n\nThank you for helping out!\n\n## Donation\n[![Share the love!](https://chewbacco-stuff.s3.amazonaws.com/donate.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KXUYS4ARNHCN8)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtomLinter/linter-coffeelint.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "apm test"
+  },
+  "version": "1.3.1",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "atom-linter",
+        "version": "10.0.0",
+        "path": "node_modules/atom-linter/lib/index.js"
+      },
+      {
+        "name": "atom-package-deps",
+        "version": "4.6.0",
+        "path": "node_modules/atom-package-deps/lib/index.js"
+      },
+      {
+        "name": "sb-exec",
+        "version": "3.1.0",
+        "path": "node_modules/atom-package-deps/node_modules/sb-exec/lib/index.js"
+      },
+      {
+        "name": "atom-package-path",
+        "version": "1.1.0",
+        "path": "node_modules/atom-package-path/lib/index.js"
+      },
+      {
+        "name": "balanced-match",
+        "version": "1.0.0",
+        "path": "node_modules/balanced-match/index.js"
+      },
+      {
+        "name": "brace-expansion",
+        "version": "1.1.8",
+        "path": "node_modules/brace-expansion/index.js"
+      },
+      {
+        "name": "coffee-script",
+        "version": "1.11.1",
+        "path": "node_modules/coffee-script/lib/coffee-script/coffee-script.js"
+      },
+      {
+        "name": "coffeelint",
+        "version": "1.16.0",
+        "path": "node_modules/coffeelint/lib/coffeelint.js"
+      },
+      {
+        "name": "resolve",
+        "version": "0.6.3",
+        "path": "node_modules/coffeelint/node_modules/resolve/index.js"
+      },
+      {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "path": "node_modules/concat-map/index.js"
+      },
+      {
+        "name": "consistent-env",
+        "version": "1.3.1",
+        "path": "node_modules/consistent-env/lib/index.js"
+      },
+      {
+        "name": "fs.realpath",
+        "version": "1.0.0",
+        "path": "node_modules/fs.realpath/index.js"
+      },
+      {
+        "name": "glob",
+        "version": "7.1.2",
+        "path": "node_modules/glob/glob.js"
+      },
+      {
+        "name": "ignore",
+        "version": "3.3.5",
+        "path": "node_modules/ignore/ignore.js"
+      },
+      {
+        "name": "inflight",
+        "version": "1.0.6",
+        "path": "node_modules/inflight/inflight.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.3",
+        "path": "node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "is-utf8",
+        "version": "0.2.1",
+        "path": "node_modules/is-utf8/is-utf8.js"
+      },
+      {
+        "name": "lodash.uniq",
+        "version": "4.5.0",
+        "path": "node_modules/lodash.uniq/index.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "3.0.4",
+        "path": "node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "minimist",
+        "version": "0.0.10",
+        "path": "node_modules/minimist/index.js"
+      },
+      {
+        "name": "named-js-regexp",
+        "version": "1.3.2",
+        "path": "node_modules/named-js-regexp/lib/named-js-regexp.js"
+      },
+      {
+        "name": "once",
+        "version": "1.4.0",
+        "path": "node_modules/once/once.js"
+      },
+      {
+        "name": "optimist",
+        "version": "0.6.1",
+        "path": "node_modules/optimist/index.js"
+      },
+      {
+        "name": "os-tmpdir",
+        "version": "1.0.2",
+        "path": "node_modules/os-tmpdir/index.js"
+      },
+      {
+        "name": "path-is-absolute",
+        "version": "1.0.1",
+        "path": "node_modules/path-is-absolute/index.js"
+      },
+      {
+        "name": "path-parse",
+        "version": "1.0.5",
+        "path": "node_modules/path-parse/index.js"
+      },
+      {
+        "name": "resolve",
+        "version": "1.4.0",
+        "path": "node_modules/resolve/index.js"
+      },
+      {
+        "name": "sb-callsite",
+        "version": "1.1.2",
+        "path": "node_modules/sb-callsite/lib/main.js"
+      },
+      {
+        "name": "sb-exec",
+        "version": "4.0.0",
+        "path": "node_modules/sb-exec/lib/index.js"
+      },
+      {
+        "name": "sb-fs",
+        "version": "3.0.0",
+        "path": "node_modules/sb-fs/lib/index.js"
+      },
+      {
+        "name": "sb-memoize",
+        "version": "1.0.2",
+        "path": "node_modules/sb-memoize/lib/index.js"
+      },
+      {
+        "name": "sb-npm-path",
+        "version": "2.0.0",
+        "path": "node_modules/sb-npm-path/lib/index.js"
+      },
+      {
+        "name": "sb-promisify",
+        "version": "2.0.2",
+        "path": "node_modules/sb-promisify/lib/index.js"
+      },
+      {
+        "name": "semver",
+        "version": "5.4.1",
+        "path": "node_modules/semver/semver.js"
+      },
+      {
+        "name": "strip-bom-buf",
+        "version": "1.0.0",
+        "path": "node_modules/strip-bom-buf/index.js"
+      },
+      {
+        "name": "strip-json-comments",
+        "version": "1.0.4",
+        "path": "node_modules/strip-json-comments/strip-json-comments.js"
+      },
+      {
+        "name": "tmp",
+        "version": "0.0.33",
+        "path": "node_modules/tmp/lib/tmp.js"
+      },
+      {
+        "name": "wordwrap",
+        "version": "0.0.3",
+        "path": "node_modules/wordwrap/index.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.2",
+        "path": "node_modules/wrappy/wrappy.js"
+      }
+    ],
+    "extensions": {
+      ".json": [
+        "node_modules/atom-linter/.eslintrc.json",
+        "node_modules/atom-linter/package.json",
+        "node_modules/atom-package-deps/.eslintrc.json",
+        "node_modules/atom-package-deps/node_modules/sb-exec/.eslintrc.json",
+        "node_modules/atom-package-deps/node_modules/sb-exec/package.json",
+        "node_modules/atom-package-deps/package.json",
+        "node_modules/atom-package-path/package.json",
+        "node_modules/balanced-match/package.json",
+        "node_modules/brace-expansion/package.json",
+        "node_modules/coffee-script/package.json",
+        "node_modules/coffeelint/generated_coffeelint.json",
+        "node_modules/coffeelint/node_modules/resolve/lib/core.json",
+        "node_modules/coffeelint/node_modules/resolve/package.json",
+        "node_modules/coffeelint/package.json",
+        "node_modules/concat-map/package.json",
+        "node_modules/consistent-env/.eslintrc.json",
+        "node_modules/consistent-env/package.json",
+        "node_modules/fs.realpath/package.json",
+        "node_modules/glob/package.json",
+        "node_modules/ignore/package.json",
+        "node_modules/inflight/package.json",
+        "node_modules/inherits/package.json",
+        "node_modules/is-utf8/package.json",
+        "node_modules/lodash.uniq/package.json",
+        "node_modules/minimatch/package.json",
+        "node_modules/minimist/package.json",
+        "node_modules/named-js-regexp/package.json",
+        "node_modules/once/package.json",
+        "node_modules/optimist/package.json",
+        "node_modules/os-tmpdir/package.json",
+        "node_modules/path-is-absolute/package.json",
+        "node_modules/path-parse/package.json",
+        "node_modules/resolve/lib/core.json",
+        "node_modules/resolve/package.json",
+        "node_modules/sb-callsite/package.json",
+        "node_modules/sb-exec/.eslintrc.json",
+        "node_modules/sb-exec/package.json",
+        "node_modules/sb-fs/package.json",
+        "node_modules/sb-memoize/.eslintrc.json",
+        "node_modules/sb-memoize/package.json",
+        "node_modules/sb-npm-path/.eslintrc.json",
+        "node_modules/sb-npm-path/package.json",
+        "node_modules/sb-promisify/package.json",
+        "node_modules/semver/package.json",
+        "node_modules/strip-bom-buf/package.json",
+        "node_modules/strip-json-comments/package.json",
+        "node_modules/tmp/package.json",
+        "node_modules/wordwrap/package.json",
+        "node_modules/wrappy/package.json",
+        "package-lock.json",
+        "package.json"
+      ],
+      ".js": [
+        "node_modules/atom-linter/lib/helpers.js",
+        "node_modules/atom-linter/lib/index.js",
+        "node_modules/atom-linter/lib/types.js",
+        "node_modules/atom-package-deps/lib/helpers.js",
+        "node_modules/atom-package-deps/lib/index.js",
+        "node_modules/atom-package-deps/lib/types.js",
+        "node_modules/atom-package-deps/lib/view.js",
+        "node_modules/atom-package-deps/node_modules/sb-exec/decls/jasmine.js",
+        "node_modules/atom-package-deps/node_modules/sb-exec/lib/helpers.js",
+        "node_modules/atom-package-deps/node_modules/sb-exec/lib/index.js",
+        "node_modules/atom-package-deps/node_modules/sb-exec/lib/types.js",
+        "node_modules/atom-package-path/lib/index.js",
+        "node_modules/balanced-match/index.js",
+        "node_modules/brace-expansion/index.js",
+        "node_modules/coffee-script/lib/coffee-script/browser.js",
+        "node_modules/coffee-script/lib/coffee-script/cake.js",
+        "node_modules/coffee-script/lib/coffee-script/coffee-script.js",
+        "node_modules/coffee-script/lib/coffee-script/command.js",
+        "node_modules/coffee-script/lib/coffee-script/grammar.js",
+        "node_modules/coffee-script/lib/coffee-script/helpers.js",
+        "node_modules/coffee-script/lib/coffee-script/index.js",
+        "node_modules/coffee-script/lib/coffee-script/lexer.js",
+        "node_modules/coffee-script/lib/coffee-script/nodes.js",
+        "node_modules/coffee-script/lib/coffee-script/optparse.js",
+        "node_modules/coffee-script/lib/coffee-script/parser.js",
+        "node_modules/coffee-script/lib/coffee-script/register.js",
+        "node_modules/coffee-script/lib/coffee-script/repl.js",
+        "node_modules/coffee-script/lib/coffee-script/rewriter.js",
+        "node_modules/coffee-script/lib/coffee-script/scope.js",
+        "node_modules/coffee-script/lib/coffee-script/sourcemap.js",
+        "node_modules/coffee-script/register.js",
+        "node_modules/coffee-script/repl.js",
+        "node_modules/coffeelint/lib/cache.js",
+        "node_modules/coffeelint/lib/coffeelint.js",
+        "node_modules/coffeelint/lib/commandline.js",
+        "node_modules/coffeelint/lib/configfinder.js",
+        "node_modules/coffeelint/lib/reporters/checkstyle.js",
+        "node_modules/coffeelint/lib/reporters/csv.js",
+        "node_modules/coffeelint/lib/reporters/default.js",
+        "node_modules/coffeelint/lib/reporters/jslint.js",
+        "node_modules/coffeelint/lib/reporters/raw.js",
+        "node_modules/coffeelint/lib/ruleLoader.js",
+        "node_modules/coffeelint/node_modules/resolve/example/async.js",
+        "node_modules/coffeelint/node_modules/resolve/example/sync.js",
+        "node_modules/coffeelint/node_modules/resolve/index.js",
+        "node_modules/coffeelint/node_modules/resolve/lib/async.js",
+        "node_modules/coffeelint/node_modules/resolve/lib/caller.js",
+        "node_modules/coffeelint/node_modules/resolve/lib/core.js",
+        "node_modules/coffeelint/node_modules/resolve/lib/node-modules-paths.js",
+        "node_modules/coffeelint/node_modules/resolve/lib/sync.js",
+        "node_modules/coffeelint/vowsrunner.js",
+        "node_modules/concat-map/example/map.js",
+        "node_modules/concat-map/index.js",
+        "node_modules/consistent-env/lib/helpers.js",
+        "node_modules/consistent-env/lib/index.js",
+        "node_modules/fs.realpath/index.js",
+        "node_modules/fs.realpath/old.js",
+        "node_modules/glob/common.js",
+        "node_modules/glob/glob.js",
+        "node_modules/glob/sync.js",
+        "node_modules/ignore/ignore.js",
+        "node_modules/inflight/inflight.js",
+        "node_modules/inherits/inherits.js",
+        "node_modules/inherits/inherits_browser.js",
+        "node_modules/is-utf8/is-utf8.js",
+        "node_modules/lodash.uniq/index.js",
+        "node_modules/minimatch/minimatch.js",
+        "node_modules/minimist/example/parse.js",
+        "node_modules/minimist/index.js",
+        "node_modules/named-js-regexp/lib/named-js-regexp.js",
+        "node_modules/once/once.js",
+        "node_modules/optimist/example/bool.js",
+        "node_modules/optimist/example/boolean_double.js",
+        "node_modules/optimist/example/boolean_single.js",
+        "node_modules/optimist/example/default_hash.js",
+        "node_modules/optimist/example/default_singles.js",
+        "node_modules/optimist/example/divide.js",
+        "node_modules/optimist/example/line_count.js",
+        "node_modules/optimist/example/line_count_options.js",
+        "node_modules/optimist/example/line_count_wrap.js",
+        "node_modules/optimist/example/nonopt.js",
+        "node_modules/optimist/example/reflect.js",
+        "node_modules/optimist/example/short.js",
+        "node_modules/optimist/example/string.js",
+        "node_modules/optimist/example/usage-options.js",
+        "node_modules/optimist/example/xup.js",
+        "node_modules/optimist/index.js",
+        "node_modules/os-tmpdir/index.js",
+        "node_modules/path-is-absolute/index.js",
+        "node_modules/path-parse/index.js",
+        "node_modules/path-parse/index.min.js",
+        "node_modules/path-parse/test.js",
+        "node_modules/path-parse/test.min.js",
+        "node_modules/resolve/example/async.js",
+        "node_modules/resolve/example/sync.js",
+        "node_modules/resolve/index.js",
+        "node_modules/resolve/lib/async.js",
+        "node_modules/resolve/lib/caller.js",
+        "node_modules/resolve/lib/core.js",
+        "node_modules/resolve/lib/node-modules-paths.js",
+        "node_modules/resolve/lib/sync.js",
+        "node_modules/sb-callsite/lib/main.js",
+        "node_modules/sb-exec/lib/helpers.js",
+        "node_modules/sb-exec/lib/index.js",
+        "node_modules/sb-exec/lib/types.js",
+        "node_modules/sb-fs/lib/index.js",
+        "node_modules/sb-memoize/lib/index.js",
+        "node_modules/sb-npm-path/decls/jasmine.js",
+        "node_modules/sb-npm-path/lib/helpers.js",
+        "node_modules/sb-npm-path/lib/index.js",
+        "node_modules/sb-promisify/lib/index.js",
+        "node_modules/semver/semver.js",
+        "node_modules/strip-bom-buf/index.js",
+        "node_modules/strip-json-comments/cli.js",
+        "node_modules/strip-json-comments/strip-json-comments.js",
+        "node_modules/tmp/lib/tmp.js",
+        "node_modules/wordwrap/example/center.js",
+        "node_modules/wordwrap/example/meat.js",
+        "node_modules/wordwrap/index.js",
+        "node_modules/wrappy/wrappy.js",
+        "src/index.js",
+        "src/worker.js"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "",
+          "spec",
+          "spec/fixtures/arrow_spacing",
+          "spec/fixtures/arrow_spacing_warning",
+          "spec/fixtures/valid",
+          "spec/fixtures/valid_coffeelint",
+          "src"
+        ],
+        "dependencies": {
+          "atom-linter": "^10.0.0",
+          "atom-package-deps": "^4.6.0",
+          "coffeelint": "^1.16.0",
+          "ignore": "^3.3.3",
+          "resolve": "^1.4.0",
+          "semver": "^5.4.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-linter",
+          "node_modules/atom-linter/lib"
+        ],
+        "dependencies": {
+          "named-js-regexp": "^1.3.1",
+          "sb-exec": "^4.0.0",
+          "sb-promisify": "^2.0.1",
+          "tmp": "~0.0.28"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-package-deps",
+          "node_modules/atom-package-deps/lib"
+        ],
+        "dependencies": {
+          "atom-package-path": "^1.1.0",
+          "sb-exec": "^3.0.1",
+          "sb-fs": "^3.0.0",
+          "semver": "^5.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-package-deps/node_modules/sb-exec",
+          "node_modules/atom-package-deps/node_modules/sb-exec/decls",
+          "node_modules/atom-package-deps/node_modules/sb-exec/lib"
+        ],
+        "dependencies": {
+          "consistent-env": "^1.2.0",
+          "lodash.uniq": "^4.5.0",
+          "sb-npm-path": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-package-path/lib",
+          "node_modules/atom-package-path",
+          "node_modules/atom-package-path/spec"
+        ],
+        "dependencies": {
+          "sb-callsite": "^1.1.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/brace-expansion"
+        ],
+        "dependencies": {
+          "balanced-match": "^1.0.0",
+          "concat-map": "0.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/coffeelint",
+          "node_modules/coffeelint/lib",
+          "node_modules/coffeelint/lib/reporters"
+        ],
+        "dependencies": {
+          "coffee-script": "~1.11.0",
+          "glob": "^7.0.6",
+          "ignore": "^3.0.9",
+          "optimist": "^0.6.1",
+          "resolve": "^0.6.3",
+          "strip-json-comments": "^1.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/consistent-env",
+          "node_modules/consistent-env/lib"
+        ],
+        "dependencies": {
+          "lodash.uniq": "^4.5.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/glob"
+        ],
+        "dependencies": {
+          "fs.realpath": "^1.0.0",
+          "inflight": "^1.0.4",
+          "inherits": "2",
+          "minimatch": "^3.0.4",
+          "once": "^1.3.0",
+          "path-is-absolute": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/inflight"
+        ],
+        "dependencies": {
+          "once": "^1.3.0",
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/minimatch"
+        ],
+        "dependencies": {
+          "brace-expansion": "^1.1.7"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/once"
+        ],
+        "dependencies": {
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/optimist/example",
+          "node_modules/optimist",
+          "node_modules/optimist/test/_",
+          "node_modules/optimist/test"
+        ],
+        "dependencies": {
+          "minimist": "~0.0.1",
+          "wordwrap": "~0.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/resolve/example",
+          "node_modules/resolve",
+          "node_modules/resolve/lib",
+          "node_modules/resolve/test",
+          "node_modules/resolve/test/dotdot/abc",
+          "node_modules/resolve/test/dotdot",
+          "node_modules/resolve/test/module_dir/xmodules/aaa",
+          "node_modules/resolve/test/module_dir/ymodules/aaa",
+          "node_modules/resolve/test/module_dir/zmodules/bbb",
+          "node_modules/resolve/test/node_path/x/aaa",
+          "node_modules/resolve/test/node_path/x/ccc",
+          "node_modules/resolve/test/node_path/y/bbb",
+          "node_modules/resolve/test/node_path/y/ccc",
+          "node_modules/resolve/test/pathfilter/deep_ref",
+          "node_modules/resolve/test/precedence/aaa",
+          "node_modules/resolve/test/precedence",
+          "node_modules/resolve/test/precedence/bbb",
+          "node_modules/resolve/test/resolver/baz",
+          "node_modules/resolve/test/resolver",
+          "node_modules/resolve/test/resolver/dot_main",
+          "node_modules/resolve/test/resolver/dot_slash_main",
+          "node_modules/resolve/test/resolver/incorrect_main",
+          "node_modules/resolve/test/resolver/other_path/lib",
+          "node_modules/resolve/test/resolver/other_path",
+          "node_modules/resolve/test/resolver/quux/foo",
+          "node_modules/resolve/test/resolver/same_names/foo",
+          "node_modules/resolve/test/resolver/same_names",
+          "node_modules/resolve/test/resolver/without_basedir"
+        ],
+        "dependencies": {
+          "path-parse": "^1.0.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/sb-exec",
+          "node_modules/sb-exec/lib"
+        ],
+        "dependencies": {
+          "consistent-env": "^1.2.0",
+          "lodash.uniq": "^4.5.0",
+          "sb-npm-path": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/sb-fs/lib",
+          "node_modules/sb-fs"
+        ],
+        "dependencies": {
+          "sb-promisify": "^2.0.1",
+          "strip-bom-buf": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/sb-npm-path",
+          "node_modules/sb-npm-path/decls",
+          "node_modules/sb-npm-path/lib"
+        ],
+        "dependencies": {
+          "sb-memoize": "^1.0.2",
+          "sb-promisify": "^2.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/strip-bom-buf"
+        ],
+        "dependencies": {
+          "is-utf8": "^0.2.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tmp/lib",
+          "node_modules/tmp"
+        ],
+        "dependencies": {
+          "os-tmpdir": "~1.0.2"
+        }
+      }
+    ]
+  }
+}
